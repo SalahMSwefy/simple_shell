@@ -10,42 +10,35 @@
  */
 int handel_exit(char **args, char *argv, int err, unsigned int cnt)
 {
-    if (args[1])
-    {
-        if (if_num(args[1]))
-        {
-            err = 2;
-            print_error(argv, cnt, args[0], "Illegal number: ");
-            _puts(args[1]);
-            _putchar('\n');
+	if (args[1])
+	{
+		if (if_num(args[1]))
+		{
+			err = 2;
+			print_error(argv, cnt, args[0], "Illegal number: ");
+			_puts(args[1]);
+			_putchar('\n');
 			return (err);
-        }
-        else
-        {
-            err = _atoi(args[1]);
-        }
-    }
-    else
-    {
-        if (strcmp(args[0], "exit") == 0)
-        {
-            if (cnt == 1)
-            {
-                exit(0);
-            }
-            else
-            {
-                err = 2;
-            }
-        }
-        else
-        {
-            err = 2;
-        }
-    }
-
-    free_buffer(args);
-    exit(err);
+		}
+		else
+		{
+			err = _atoi(args[1]);
+		}
+	}
+	else
+	{
+		if (strcmp(args[0], "exit") == 0)
+		{
+			if (cnt == 1)
+				exit(0);
+			else
+				err = 2;
+		}
+		else
+			err = 2;
+	}
+	free_buffer(args);
+	exit(err);
 }
 /**
  * if_num - checks if a string is a number
@@ -106,6 +99,7 @@ void free_buffer(char **buffer)
 }
 /**
  * _env - prints the environment
+ * @env: environment
  * Return: void
  */
 void _env(char **env)
@@ -117,6 +111,4 @@ void _env(char **env)
 		printf("%s\n", env[i]);
 		i++;
 	}
-
 }
-
