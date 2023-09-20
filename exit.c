@@ -14,7 +14,7 @@ int handel_exit(char **args, char *argv, int err, unsigned int cnt)
 	{
 		if (if_num(args[1]))
 		{
-			err = 2;
+			errno = err = 2;
 			print_error(argv, cnt, args[0], "Illegal number: ");
 			_puts(args[1]);
 			_putchar('\n');
@@ -37,6 +37,7 @@ int handel_exit(char **args, char *argv, int err, unsigned int cnt)
 		else
 			err = 2;
 	}
+	errno = err;
 	free_buffer(args);
 	exit(err);
 }
