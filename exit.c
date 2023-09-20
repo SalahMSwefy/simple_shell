@@ -30,7 +30,10 @@ int handel_exit(char **args, char *argv, int err, unsigned int cnt)
 		if (strcmp(args[0], "exit") == 0)
 		{
 			if (cnt == 1)
+			{
+				free_buffer(args);
 				exit(0);
+			}
 			else
 				err = 2;
 		}
