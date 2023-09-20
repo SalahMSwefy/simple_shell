@@ -1,14 +1,10 @@
 # 0x16. C - Simple Shell
 
-![Shell Image](shell_image.png) (Optional: include an image of your shell)
-
 ## Table of Contents
 - [Description](#description)
 - [Features](#features)
 - [Usage](#usage)
 - [Installation](#installation)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Description
 A simple Unix shell implementation written in C as part of the 0x16 - C - Simple Shell project. This shell provides basic command execution and features similar to popular Unix shells like `bash` or `sh`.
