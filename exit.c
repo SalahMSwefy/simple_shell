@@ -44,7 +44,7 @@ int handel_exit(char **args, char *argv, int err, unsigned int cnt)
     }
 
     free_buffer(args);
-    return err;
+    exit(err);
 }
 /**
  * if_num - checks if a string is a number
