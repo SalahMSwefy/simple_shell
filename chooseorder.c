@@ -37,7 +37,7 @@ void chooseorder(char **args, char **argv, int cnt)
 			exit(2);
 	}
 	else if (_strcmp(args[0], "env") == 0)
-		_env();
+		_env(__environ);
 	else
 	{
 		exstat = _exec(args, args[0], argv[0], cnt);

@@ -86,14 +86,14 @@ void free_buffer(char **buffer)
  * _env - prints the environment
  * Return: void
  */
-void _env(void)
+void _env(char **env)
 {
 	unsigned int i = 0;
 
-	while (__environ[i] != NULL)
+	while (env[i] != NULL)
 	{
-		_puts(__environ[i]);
-		_puts("\n");
+		printf("%s\n", env[i]);
 		i++;
 	}
+
 }

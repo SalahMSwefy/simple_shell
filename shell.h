@@ -31,7 +31,7 @@ int handel_exit(char **args, char *line, int err, unsigned int cnt);
 int if_num(char *s);
 int _atoi(char *s);
 void free_buffer(char **buffer);
-void _env(void);
+void _env(char **env);
 
 /*get_function*/
 char *_getenv(const char *name);
