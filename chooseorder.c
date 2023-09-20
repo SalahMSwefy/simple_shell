@@ -34,7 +34,10 @@ void chooseorder(char **args, char **argv, int cnt)
 	else if (_strcmp(args[0], "exit") == 0)
 	{
 		if (handel_exit(args, argv[0], err, cnt) == 2 && !isatty(0))
-			exit(2);
+			{
+				free_buffer(args);
+				return;
+			}
 	}
 	else if (_strcmp(args[0], "env") == 0)
 		_env(__environ);
