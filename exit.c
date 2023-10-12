@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * handel_exit - handles the exit builtin
+ * handel_exit - handles the exit builtin like exit()
  * @args: arguments
  * @argv: argv[0]
  * @err: error number
